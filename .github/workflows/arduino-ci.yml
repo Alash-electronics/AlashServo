@@ -42,12 +42,21 @@ jobs:
         run: |
           mkdir -p "$HOME/Arduino/libraries"
           ln -s "$PWD" "$HOME/Arduino/libraries/AlashServo"
+      - name: Install dependencies
+        run: |
+          deps=$(grep '^depends=' library.properties | cut -d= -f2- | tr ',' '
+' || true)
+          echo "$deps" | while IFS= read -r d; do [ -n "$d" ] && arduino-cli lib install "$d"; done
       - name: Compile examples
         run: |
           fail=0
           for example in $(find examples -name "*.ino"); do
             # примеры только для ESP на AVR не собираем
-            if [[ "${{ matrix.board.fqbn }}" != esp32* ]] && [[ "$example" == *ESP* ]]; then continue; fi
+            f="${{ matrix.board.fqbn }}"
+            if [[ "$f" != esp32* && "$example" == *ESP32* ]]; then continue; fi
+            if [[ "$f" != esp8266* && "$example" == *ESP8266* ]]; then continue; fi
+            if [[ "$f" != esp* && "$example" == *ESP* ]]; then continue; fi
+            if [[ "$f" != arduino:avr* && "$example" == *_AVR* ]]; then continue; fi
             echo "::group::$example"
             arduino-cli compile --fqbn ${{ matrix.board.fqbn }} "$example" || fail=1
             echo "::endgroup::"
