@@ -44,8 +44,7 @@ jobs:
           ln -s "$PWD" "$HOME/Arduino/libraries/AlashServo"
       - name: Install dependencies
         run: |
-          deps=$(grep '^depends=' library.properties | cut -d= -f2- | tr ',' '
-' || true)
+          deps=$(grep '^depends=' library.properties | cut -d= -f2- | tr ',' '\n' || true)
           echo "$deps" | while IFS= read -r d; do [ -n "$d" ] && arduino-cli lib install "$d"; done
       - name: Compile examples
         run: |
