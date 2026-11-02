@@ -1,6 +1,6 @@
 {
   "name": "AlashServo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Smooth non-blocking servo control with easing, speed, limits, groups and sweep; AVR, ESP8266 and ESP32 (LEDC), no extra libraries",
   "keywords": "servo, smooth, easing, motion, robot arm, sg90, mg996r, sweep, esp32, non-blocking",
   "repository": {

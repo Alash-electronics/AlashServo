@@ -1,5 +1,9 @@
-// AlashServo: рука-манипулятор из трёх серво. AlashServoGroup двигает их вместе, все приезжают в цель одновременно.
-// Подключение: основание на пин 9, плечо на 10, схват на 11 (на ESP32 пины 13, 14, 27). Питание серво от отдельного источника.
+// [ru] AlashServo: рука-манипулятор из трёх серво. AlashServoGroup двигает их вместе, все приезжают в цель одновременно.
+//      Подключение: основание на пин 9, плечо на 10, схват на 11 (на ESP32 пины 13, 14, 27). Питание серво от отдельного источника.
+// [kk] AlashServo: үш серводан тұратын қол-манипулятор. AlashServoGroup оларды бірге қозғалтады, барлығы мақсатқа бір мезгілде жетеді.
+//      Қосу: негіз 9 пинге, иық 10-ға, қармағыш 11-ге (ESP32-де 13, 14, 27 пиндері). Серволарды бөлек көзден қоректендіріңіз.
+// [en] AlashServo: a robot arm of three servos. AlashServoGroup moves them together, all arrive at the target at the same time.
+//      Wiring: base on pin 9, shoulder on 10, gripper on 11 (on ESP32 pins 13, 14, 27). Power the servos from a separate supply.
 #include <AlashServo.h>
 
 #if defined(ARDUINO_ARCH_ESP32)

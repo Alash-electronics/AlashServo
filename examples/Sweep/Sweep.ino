@@ -1,5 +1,9 @@
-// AlashServo: качание, как у радара или головы робота. sweep() сам разворачивает серво на краях, пока не вызовут stop().
-// Параллельно программа мигает светодиодом без delay(): серво ей не мешает.
+// [ru] AlashServo: качание, как у радара или головы робота. sweep() сам разворачивает серво на краях, пока не вызовут stop().
+//      Параллельно программа мигает светодиодом без delay(): серво ей не мешает.
+// [kk] AlashServo: радар немесе робот басы сияқты тербеліс. sweep() stop() шақырылғанша серваны шеттерінде өзі бұрады.
+//      Қатар бағдарлама delay() жоқ жарықдиодты жыпылықтатады: серво оған кедергі жасамайды.
+// [en] AlashServo: a sweep, like a radar or a robot head. sweep() turns the servo around at the ends by itself until stop() is called.
+//      In parallel the program blinks an LED without delay(): the servo does not get in the way.
 #include <AlashServo.h>
 
 #if defined(ARDUINO_ARCH_ESP32)

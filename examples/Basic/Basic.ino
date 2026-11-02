@@ -1,7 +1,15 @@
-// AlashServo: самый простой пример. Серво плавно едет в три положения, программа при этом не стоит.
+// [ru] AlashServo: самый простой пример. Серво плавно едет в три положения, программа при этом не стоит.
 //
-// Подключение: коричневый или чёрный провод серво к GND, красный к 5 В (лучше от отдельного источника, не от пина Arduino),
-// оранжевый или жёлтый (сигнал) к пину 9. На ESP32 возьмите, например, пин 13.
+//      Подключение: коричневый или чёрный провод серво к GND, красный к 5 В (лучше от отдельного источника, не от пина Arduino),
+//      оранжевый или жёлтый (сигнал) к пину 9. На ESP32 возьмите, например, пин 13.
+// [kk] AlashServo: ең қарапайым мысал. Серво үш қалыпқа баяу барады, бағдарлама тоқтамайды.
+//
+//      Қосу: серво қоңыр немесе қара сымы GND-ға, қызылы 5 В-қа (Arduino пинінен емес, бөлек көзден дұрыс),
+//      қызғылт сары немесе сары (сигнал) 9 пинге. ESP32-де, мысалы, 13 пинді алыңыз.
+// [en] AlashServo: the simplest example. The servo moves smoothly to three positions without stopping the program.
+//
+//      Wiring: the brown or black servo wire to GND, red to 5 V (better from a separate supply, not from an Arduino pin),
+//      orange or yellow (signal) to pin 9. On ESP32 take, for example, pin 13.
 #include <AlashServo.h>
 
 #if defined(ARDUINO_ARCH_ESP32)

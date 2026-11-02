@@ -1,5 +1,9 @@
-// AlashServo: разные формы движения. Серво едет туда и обратно с разной кривой: сначала равномерно, потом плавный старт, торможение и отскок.
-// В Serial Monitor (115200) видно, какая кривая сейчас.
+// [ru] AlashServo: разные формы движения. Серво едет туда и обратно с разной кривой: сначала равномерно, потом плавный старт, торможение и отскок.
+//      В Serial Monitor (115200) видно, какая кривая сейчас.
+// [kk] AlashServo: қозғалыстың әртүрлі пішіндері. Серво әртүрлі қисықпен алға-артқа жүреді: алдымен бірқалыпты, сосын баяу бастау, тежеу және секіру.
+//      Serial Monitor-да (115200) қазір қай қисық екені көрінеді.
+// [en] AlashServo: different shapes of motion. The servo goes back and forth with different curves: first uniform, then a smooth start, braking and a bounce.
+//      The Serial Monitor (115200) shows which curve is current.
 #include <AlashServo.h>
 
 #if defined(ARDUINO_ARCH_ESP32)
